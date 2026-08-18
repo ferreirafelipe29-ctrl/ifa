@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Plataforma Integrada - Física e Visão</title>
+  <style>
+    nav { display: flex; gap: 10px; background: #333; padding: 10px; }
+    nav button { color: #fff; background: none; border: none; padding: 10px; cursor: pointer; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="switchTab('muv')">⚡ Simulador de Movimento</button>
+    <button onclick="switchTab('visao')">👁️ Visão Computacional</button>
+  </nav>
+
+  <!-- Seção 1: MUV e MU -->
+  <section id="muv" class="tab-content active">
+    <h2>Simulador de Movimento (MU e MUV)</h2>
+    <!-- Insira aqui o conteúdo HTML do simulador -->
+  </section>
+
+  <!-- Seção 2: Visão -->
+  <section id="visao" class="tab-content">
+    <h2>Visão Computacional</h2>
+    <!-- Insira aqui o conteúdo HTML do projeto de visão -->
+  </section>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
